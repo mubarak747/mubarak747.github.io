@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Fitness Club</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <style>
+        /* You can add custom styles here */
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Monster Fitness Club</h3>
+                        <form id="joinForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Join Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, jQuery, and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"
+        integrity="sha384-BN1M2eR4QtfUa8hjjiptpV+W4pNpNN7tRwEsJ+RU9ilGRZc4VziCgnoC2IHl/NM2"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-ho+j7jyWK8fNQej+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tEy1gpcaXJC3m"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function () {
+            $('#joinForm').submit(function (event) {
+                event.preventDefault(); // Prevent form submission
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var phone = $('#phone').val();
+                if (name && email && phone) {
+                    alert('Thank you, ' + name + '! Your registration is successful.');
+                    // You can send form data to server or perform any other action here
+                } else {
+                    alert('Please fill in all the fields.');
+                    window.location.href='navigation Bar.html';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
